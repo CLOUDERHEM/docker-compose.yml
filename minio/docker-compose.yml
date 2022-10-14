@@ -4,8 +4,8 @@ services:
     image: minio/minio
     container_name: minio
     volumes:
-      - "/root/minio/data:/data"
-      - "/root/minio/config:/root/.minio"
+      - "${pwd}/minio/data:/data"
+      - "${pwd}/minio/config:/root/.minio"
     environment:
       - "MINIO_ROOT_USER=root"
       - "MINIO_ROOT_PASSWORD=admin"

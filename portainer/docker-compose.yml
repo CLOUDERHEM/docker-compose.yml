@@ -5,8 +5,8 @@ services:
     image: portainer/portainer-ce
     container_name: portainer
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - /root/portainer/data:/data
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "${pwd}/portainer/data:/data"
     ports:
       - "8001:8000"
       - "9001:9000"
