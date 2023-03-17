@@ -11,7 +11,7 @@ services:
     environment:
       TZ: Asia/Shanghai
     volumes:
-      - "${pwd}/redis/data:/data"
-      - "${pwd}/redis/conf/redis.conf:/etc/redis/redis.conf"
-      - "${pwd}/redis/logs:/logs:
+      - "./redis/data:/data"
+      - "./redis/conf/redis.conf:/etc/redis/redis.conf"
+      - "./redis/logs:/logs:"
     command: [ "redis-server","/etc/redis/redis.conf" ]

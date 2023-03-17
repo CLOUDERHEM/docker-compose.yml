@@ -5,7 +5,7 @@ services:
     restart: always
     container_name: nginx
     volumes:
-      - "${pwd}/nginx/html:/usr/share/nginx/html"
-      - "${pwd}/nginx/conf:/etc/nginx/conf.d"
+      - "./nginx/html:/usr/share/nginx/html"
+      - "./nginx/conf:/etc/nginx/conf.d"
     ports:
       - "80:80"

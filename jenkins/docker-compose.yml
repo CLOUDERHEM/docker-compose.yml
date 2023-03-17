@@ -7,7 +7,7 @@ services:
     container_name: jenkins
     read_only: false
     volumes:
-      - "${pwd}/jenkins/data:/var/jenkins_home"
+      - "./jenkins/data:/var/jenkins_home"
     ports:
       - "800:8080"
       - "50000:50000"
